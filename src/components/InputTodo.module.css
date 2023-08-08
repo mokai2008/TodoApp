@@ -1,0 +1,28 @@
+.form {
+    margin: 0 auto 1.2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+.form input[type=text] {
+    padding: 0.4rem 8rem;
+    border-radius: 5px;
+    margin: 0 1rem;
+}
+
+ .button {
+    border: none;
+    padding: 0.4rem 3rem;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 5px;
+    color: wheat;
+    transition: all ease-in 0.3s;
+}
+
+.button:hover {
+    background-color: wheat;
+    color: black;
+}

@@ -1,14 +1,16 @@
 import React from "react";
+import classes from "./InputTodo.module.css";
 
 const InputTodo = (props) => {
   return (
-    <form>
+    <form className={classes.form}>
       <div>
-        <label htmlFor="inputText">Your Task</label>
-        <input type="text" name="inputText" />
+        <input type="text" name="inputText" placeholder="Write your task" />
       </div>
       <div>
-        <button type="submit">ADD</button>
+        <button type="submit" className={classes.button}>
+          ADD
+        </button>
       </div>
     </form>
   );
