@@ -1,7 +1,7 @@
 import React from "react";
 
 const Todos = () => {
-  return <div>Todos</div>;
+  return <></>;
 };
 
 export default Todos;
