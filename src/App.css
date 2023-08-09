@@ -5,14 +5,14 @@
     box-sizing: border-box;
 }
 
-
-.App {
+html {
     background-color: aquamarine;
     width: 100%;
     height: 100vh;
     padding: 1.2rem;
     text-align: center;
 }
+
 
 
 .App h1{
