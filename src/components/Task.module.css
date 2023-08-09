@@ -16,6 +16,7 @@
     border-radius: 5px;
     color: wheat;
     transition: all ease-in 0.3s;
+    margin-right: 5px;
 }
 
 .item button:hover {
