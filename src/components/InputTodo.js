@@ -17,7 +17,7 @@ const InputTodo = (props) => {
       return;
     }
 
-    taskCtx.addTask({ text: inputTextRef.current.value });
+    taskCtx.addTask(inputTextRef.current.value);
     setInputText("");
   };
 

@@ -6,6 +6,18 @@ const initalState = {
 };
 
 const tasksReducer = (state, action) => {
+  if (action.type === "ADD") {
+    const updatedTasks = state.tasks.concat({
+      id: state.tasks.length + 1,
+      text: action.item,
+      status: "not Completed",
+    });
+    console.log(updatedTasks);
+    return {
+      tasks: updatedTasks,
+    };
+  }
+
   return initalState;
 };
 
