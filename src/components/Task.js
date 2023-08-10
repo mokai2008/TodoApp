@@ -8,7 +8,7 @@ const Task = (props) => {
   return (
     <Card>
       <li className={classes.item}>
-        <p>lorum ipsim kfsklfh sjhf jskh jfdhskj hfkhkjhk s</p>
+        <p>{props.taskText}</p>
         <div>
           <button>
             <FontAwesomeIcon icon={faCheck} />

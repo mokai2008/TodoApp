@@ -4,4 +4,10 @@
     border-radius: 14px;
     background-color: white;
     margin-bottom: 1rem;
+    transition: all ease 0.3s;
+  }
+
+  .card:hover {
+    box-shadow: 5px 5px 8px wheat
+
   }
