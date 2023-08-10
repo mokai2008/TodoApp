@@ -17,6 +17,13 @@ const tasksReducer = (state, action) => {
       tasks: updatedTasks,
     };
   }
+  if (action.type === "REMOVE") {
+    const updatedTasks = state.tasks.filter((task) => task.id !== action.id);
+
+    return {
+      tasks: updatedTasks,
+    };
+  }
 
   return initalState;
 };
@@ -28,11 +35,15 @@ const TasksProvider = (props) => {
     dispatch({ type: "ADD", item: task });
   };
 
+  const removeTasksHandler = (id) => {
+    dispatch({ type: "REMOVE", id: id });
+  };
+
   const initialValue = {
     tasks: taskState.tasks,
     getTasks: () => {},
     addTask: addTaskHandler,
-    removeTask: (id) => {},
+    removeTask: removeTasksHandler,
   };
   return (
     <TaskContext.Provider value={initialValue}>

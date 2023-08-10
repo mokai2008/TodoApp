@@ -13,7 +13,7 @@ const Task = (props) => {
           <button>
             <FontAwesomeIcon icon={faCheck} />
           </button>
-          <button className={classes.delete}>
+          <button className={classes.delete} onClick={props.onRemove}>
             <FontAwesomeIcon icon={faX} />
           </button>
         </div>

@@ -35,6 +35,7 @@ const InputTodo = (props) => {
           ref={inputTextRef}
           value={inputText}
           onChange={inputChangeHandler}
+          autoFocus
         />
         {error ? <p className={classes.error}>{errorMsg}</p> : ""}
       </div>
