@@ -10,15 +10,29 @@ const tasksReducer = (state, action) => {
     const updatedTasks = state.tasks.concat({
       id: state.tasks.length + 1,
       text: action.item,
-      status: "not Completed",
+      status: "notcompleted",
     });
-    console.log(updatedTasks);
     return {
       tasks: updatedTasks,
     };
   }
   if (action.type === "REMOVE") {
     const updatedTasks = state.tasks.filter((task) => task.id !== action.id);
+
+    return {
+      tasks: updatedTasks,
+    };
+  }
+
+  if (action.type === "STATUS") {
+    const itemIndex = state.tasks.findIndex((task) => task.id === action.id);
+    const item = state.tasks[itemIndex];
+
+    const updatedItem = { ...item, status: "completed" };
+
+    const updatedTasks = [...state.tasks];
+
+    updatedTasks[itemIndex] = updatedItem;
 
     return {
       tasks: updatedTasks,
@@ -39,9 +53,13 @@ const TasksProvider = (props) => {
     dispatch({ type: "REMOVE", id: id });
   };
 
+  const statusHandler = (id) => {
+    dispatch({ type: "STATUS", id: id });
+  };
+
   const initialValue = {
     tasks: taskState.tasks,
-    getTasks: () => {},
+    changeStatus: statusHandler,
     addTask: addTaskHandler,
     removeTask: removeTasksHandler,
   };

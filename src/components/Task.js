@@ -10,7 +10,7 @@ const Task = (props) => {
       <li className={classes.item}>
         <p>{props.taskText}</p>
         <div>
-          <button>
+          <button onClick={props.onStatus}>
             <FontAwesomeIcon icon={faCheck} />
           </button>
           <button className={classes.delete} onClick={props.onRemove}>
