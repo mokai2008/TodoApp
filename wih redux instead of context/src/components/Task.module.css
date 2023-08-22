@@ -1,0 +1,31 @@
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item p {
+    margin-right: 1rem;
+}
+
+.item button {
+    border: none;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 5px;
+    color: wheat;
+    transition: all ease-in 0.3s;
+    margin-right: 5px;
+}
+
+.item button:hover {
+    background-color: wheat;
+    color: black;
+}
+
+
+.item button.delete:hover {
+    background-color: wheat;
+    color: red;
+}
